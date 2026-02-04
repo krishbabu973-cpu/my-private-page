@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💗</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#ffd6e8;
+  text-align:center;
+}
+
+.page{display:none;padding:25px}
+.page.active{display:block}
+
+h1,h2{color:#ff2f92}
+
+button{
+  padding:12px 26px;
+  font-size:18px;
+  border:none;
+  border-radius:25px;
+  background:#ff5fa2;
+  color:white;
+  margin:10px;
+  cursor:pointer;
+}
+
+.back{background:#888}
+
+/* image / gif safe */
+.media{
+  max-width:90%;
+  max-height:65vh;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+  margin:20px 0;
+}
+
+/* gifts */
+.gifts{
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  gap:30px;
+  margin-top:25px;
+}
+
+.gift{
+  font-size:60px;
+  cursor:pointer;
+}
+.gift.big{font-size:90px}
+
+/* songs */
+.song-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:18px;
+  padding:15px;
+}
+
+.song-card{
+  background:white;
+  padding:10px;
+  border-radius:14px;
+  transform:rotate(calc(-5deg + 10deg * var(--r)));
+}
+
+.song-card img{
+  width:100%;
+  max-height:140px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+audio{
+  width:100%;
+  height:28px;
+  margin-top:6px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="home">
+  <h1>Would you be my Valentine? 💗</h1>
+  <img class="media" src="cute-please.gif">
+  <br>
+  <button onclick="go('yes')">Yes</button>
+  <button onclick="go('no')">No</button>
+</div>
+
+<!-- NO PAGE -->
+<div class="page" id="no">
+  <h1>Hawwwwwwwwww 😒😒😒😒😒</h1>
+  <img class="media" src="gif.gif" height="150px" width="150px">
+  <br>
+<p> go backk and selectt the right answerrr </p>
+  <button class="back" onclick="go('home')">Back</button>
+</div>
+
+<!-- YES PAGE -->
+<div class="page" id="yes">
+  <h1>YAYYYY YOU SAID YESSSSS 🥳💖</h1>
+  <img class="media" src="Happy cat GIF.gif" height="150px" width="150px">
+
+  <div class="gifts">
+    <div class="gift" onclick="go('photo')">🎁</div>
+    <div class="gift big" onclick="go('letter')">💝</div>
+    <div class="gift" onclick="go('songs')">🎶</div>
+  </div>
+
+  <button class="back" onclick="go('home')">Back</button>
+</div>
+
+<!-- GIFT 1 : SINGLE PHOTO / GIF -->
+<div class="page" id="photo">
+  <h2>Just You 💕</h2>
+  <img class="media" src="pics1.jpg">
+<img class="media" src="pic2.jpg">
+  <button class="back" onclick="go('yes')">Back</button>
+</div>
+
+<!-- GIFT 2 : LETTER -->
+<div class="page" id="letter">
+  <h2>For You 💌</h2>
+<img class="media" src="Love You Cat GIF.gif" height="200px" width="200px">  
+<p style="max-width:600px;margin:auto;font-size:18px;color:#444">
+    Too my lovely,cute and very pretty pandaaa💓💓 . Happy valentine's day myy darlingg apko pata hai youre the first girl i'm doing all this for so agar kuch bhi isme pasand na aye ya fir accha na lage toh please judge mat karna i've tried my bestt . So first of all aapse milne ke baad and apko pehli baar dekhne ke baad i felt so good ki damnnn kya sundar ladki hai bhagwan ne kya hi creation kiya hai🤌🤌🤌🤌 . talking to you everyday makes me so much happy and aapse aat karke bahot accha lagta haii you might not know and also you must feel akward ki ye isne mere itne sare photos kyu rakhe hai but honestly i see all your photos and videos each and every single day anytime i feel like im missing you or even though i'm talking to you apke photos dekhne ke baad itna zyada khush ho jata huu naaa likee sacchi ki bas din ba jata hai🤌🤌🤌 aapki her ek cheez your eyes , your cheeks your lips your hairs your style of speaking the way you do each and every actions just makes me fall for youu everytimee and every second i see them 🫠🫠🫠🫠🫠. jitne bhi baar apse milta hu everything just feels so freakin good and hopefully apko bhi accha lagta ho and kisi bhi baat ko stress ya fir pressure na ho jo mai karta hu wether it is ki mai apko milne bulata hu ya kuch bhi . you know mujhe jab bhi thoda sa sad sort of feel hota hai na so every single time ive seen your pics and it immediately changes my mood and i start smiling . sabse badi baat you said yes to me is the best thing for me agar nhi bola hota toh ig ye maine jo bhi page banaya hai bana hi nahi pata and kisi aur ke liye bhi nahi banata because i wasn't looking for anyone <u>UNTIL I FOUND YOUUUU❤️❤️🫠🫠🫠</u> .and i might have said this earlier but telling it again , im not here with you just for fun , i truly adore you , i admire you at each and every second of my life , i respect you i have no bad and wrong thoughts for you and mainly i reallyy reallyy lovee youuu sooo muchhh my babyy❤️❤️❤️ and remember ki im here for you jab bhi apko lage anything isnt right and you need support or a shoulder to cry on okay my baby???? . so ig thats it happy valentines day aap toh waise bhi apki jill ke sath manane ja rahe ho so mai toh mana nhi paunga apke sath so this is a alternate option😂😂😂 . once again happpyy valentines dayy my cutieepieee ❤️❤️❤️
+  </p>
+  <button class="back" onclick="go('yes')">Back</button>
+</div>
+
+<!-- GIFT 3 : SONGS -->
+<div class="page" id="songs">
+  <h2>Songs that remind me of you🤌❤️🎶</h2>
+
+  <div class="song-grid">
+    <div class="song-card" style="--r:0.1">
+      <img src="herr6.jpg">
+      <audio controls src="tum tak.mp3"></audio>
+    </div>
+
+    <div class="song-card" style="--r:0.6">
+      <img src="herr7.jpg">
+      <audio controls src="be my baby.mp3"></audio>
+    </div>
+
+    <div class="song-card" style="--r:0.3">
+      <img src="herr.jpg">
+      <audio controls src="melting.mp3"></audio>
+    </div>
+
+    <div class="song-card" style="--r:0.8">
+      <img src="herr8.jpg">
+      <audio controls src="her.mp3"></audio>
+    </div>
+<div class="song-card" style="--r:0.45">
+<img src="herr9.jpg" height="200px" width="200px"> 
+<p class="card-text">humare photos hi nhi hai yehi mila sirf😂😭😭❤️</p> 
+
+</div>
+
+  <button class="back" onclick="go('yes')">Back</button>
+</div>
+
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
